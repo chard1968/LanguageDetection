@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Language Detector using N-Gram Language Model</title>
+</head>
+    <body style="background-color:grey">
+        <form action="#" th:action="@{/}" th:object="${languageDetectForm}" method="post">
+            <h2 style="color:light-green">Detect Language</h2>
+            <span th:if="${languageName != null}">
+            	<p style="font-size:32px" th:text="${languageName} + '!'" />
+            </span>
+            
+            
+            <table>
+            	<tr>
+            		<td>Languages available:</td>
+            		<td> <h5>AFRIKAANS,ENGLISH,FILIPINO,GAELIC,ITALIAN,SPANISH</h5></td>
+            	</tr>
+                <tr>
+                    <td>Input text to be detected:</td>
+                    <td><input type="text" th:field="*{text}" /></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Detect!</button></td>
+                </tr>
+               </table>
+        </form>
+    </body>
+</html>
